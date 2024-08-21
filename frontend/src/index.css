@@ -1,0 +1,283 @@
+body {
+  font-family: 'Arial, sans-serif';
+  background-color: #f4f4f4;
+  margin: 0;
+  min-height: 100vh; /* Ensure body takes the full height */
+  display: flex;
+  flex-direction: column; /* Allow body to stack header, content, footer */
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column; /* Stack header, content, footer vertically */
+  flex: 1; /* Take available space */
+}
+
+.content-area {
+  display: flex; /* Use flexbox to place sidebars and content next to each other */
+  flex: 1; /* Allow this to expand and take full height */
+}
+
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0077cc;
+  color: white;
+  padding: 1rem;
+}
+
+.profile-image-avatar {
+  width: '50px'; 
+  height: '50px'; 
+  margin-left: '20px';
+  cursor: 'pointer';
+}
+
+.footer-container {
+  background: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.logo h1 {
+  margin: 0;
+}
+
+.search-bar input {
+  padding: 0.5rem;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chat-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.left-sidebar {
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack items vertically */
+  width: 250px; /* Fixed width for left sidebar */
+  padding: 20px;
+  background: #3f51b5; /* Primary color */
+  color: white;
+}
+
+.main-content {
+  flex: 1; /* Take the remaining space in the middle for the main content */
+  padding: 20px; /* Add padding for content area */
+}
+
+.left-sidebar h2 {
+  margin-top: 0;
+}
+
+.left-sidebar nav ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.left-sidebar nav ul li {
+  display: block; /* Set display to block to stack vertically */
+  margin: 15px 0; /* Space between links */
+}
+
+.left-sidebar nav ul li a {
+  color: white;
+  text-decoration: none; /* Remove underline */
+}
+
+.left-sidebar nav ul li a:hover {
+  text-decoration: underline; /* Underline on hover for clarity */
+}
+
+/* Right Sidebar Styles */
+.right-sidebar {
+  width: 250px; /* Fixed width for right sidebar */
+  padding: 20px;
+  background: #ffffff; /* White background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 5px;
+  margin-left: 20px; /* Space between content and sidebar */
+}
+
+.right-sidebar h2 {
+  margin-top: 0;
+}
+
+/* Right Sidebar List Styles */
+.right-sidebar ul {
+  list-style: none; /* No bullet points for lists */
+  padding: 0;
+}
+
+.right-sidebar ul li {
+  margin: 10px 0; /* Space between items */
+}
+
+.projects-container, event-container {
+  padding: 20px;
+  background-color: #ffffff; /* White background for the projects section */
+}
+
+/* styles.css or App.css */
+
+.generic-item {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center align items vertically */
+  margin: 10px; /* Space between items */
+  border: 1px solid #ccc; /* Optional border for visibility */
+  padding: 10px; /* Optional padding */
+  border-radius: 5px; /* Optional rounding of corners */
+  text-decoration: none; /* Remove underline from links */
+}
+
+
+.generic-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+.item-link {
+  display: flex; /* Ensure link behaves like a flex container */
+  width: 100%; /* Allow link to take the full width */
+  text-align: left; /* Align text to the left */
+  text-decoration: none; /* No underline */
+  color: inherit; /* Inherit color from container */
+}
+
+.item-image {
+  height: 100px; /* Set the desired height */
+  width: 100px; /* Set the width to match height for a square */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+  margin-right: 15px; /* Space between image and text */
+}
+
+.item-title {
+  font-size: 1.5em;
+  color: #007bff; /* Blue color for titles */
+  margin: 0; /* Remove default margin */
+}
+
+.item-description {
+  color: #555; /* Darker gray for descriptions */
+  margin: 5px 0 0; /* Margin to space description */
+}
+
+.item-details {
+  position: relative;  /* Ensure relative positioning for any child elements if needed */
+}
+
+.item-date {
+  text-align: right;
+  color: #2c2c2c; /* Darker color for better visibility */
+  font-size: 0.9em; /* Slightly larger font size */
+  margin-top: 5px; /* Add some space above the date */
+  font-style: italic;
+}
+
+.item-location, .item-date, .item-file-type {
+  margin: 3px 0; /* Add some margin for spacing */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+}
+
+.pagination .active {
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.news-list {
+  display: grid; /* Use a grid or flexbox for layout */
+  gap: 16px; /* Spacing between items */
+}
+
+.news-date {
+  text-align: right; /* Align the date to the right */
+  font-size: 0.85em; /* Smaller font for date */
+  color: gray; /* Change color to distinguish */
+}
+
+.shortened-news {
+  margin: 10px 0; /* Add some margin between title and news content */
+}
+
+/* index.css */
+.business-details {
+  padding: 20px; /* Spacing around details */
+}
+
+.business-image {
+  width: 100%; /* Responsive image width */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 300px; /* Optional: limit height */
+  object-fit: cover; /* Crop the image nicely */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+
+.business-title {
+  font-size: 24px; /* Larger title font */
+  margin: 10px 0;
+}
+
+.business-description,
+.business-location,
+.business-contact {
+  font-size: 16px; /* Standard font size for details */
+  margin: 5px 0; /* Spacing between text paragraphs */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .app-container {
+      flex-direction: column; /* Stack sidebars on top of each other */
+  }
+  
+  .left-sidebar, .right-sidebar {
+      width: 100%; /* Full width on smaller screens */
+      margin: 0; /* No margin */
+  }
+}
